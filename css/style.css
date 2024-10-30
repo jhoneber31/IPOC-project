@@ -366,6 +366,93 @@ header {
   }
 }
 
+/*********** QUE HACEMOS ***********/
+.hacemos__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hacemos__banner {
+  background-color: var(--color-secondary);
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hacemos__title {
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.hacemos__subtitle {
+  padding-top: 30px;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.hacemos__description {
+  color: var(--color-primary);
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hacemos__description>img {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+@media(min-width: 1024px) {
+  .hacemos__banner>.container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+  }
+
+  .hacemos__title {
+    padding-bottom: 0;
+    border-bottom: none;
+    padding-right: 40px;
+    border-right: 2px solid #ffffff;
+    font-size: 4rem;
+  }
+
+  .hacemos__subtitle {
+    padding-top: 0;
+    padding-left: 40px;
+    font-size: 1.8rem;
+  }
+
+  .hacemos__info {
+    font-size: 1.2rem;
+    max-width: 55%;
+    margin-left: auto;
+    transform: translateX(-5%);
+  }
+
+  .hacemos__description>img {
+    margin-top: 80px;
+  }
+}
+
+@media(min-width: 1280px) {
+  .hacemos__info {
+    max-width: 50%;
+    transform: translateX(-12%);
+  }
+}
+
+@media(min-width: 1536px) {
+  .hacemos__info {
+    max-width: 40%;
+    transform: translateX(-37%);
+  }
+}
+
 /*********** CONTACTANOS ***********/
 .contactanos__background {
   background-color: var(--color-secondary);
