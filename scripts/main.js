@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const menuBurger = document.getElementById("burger-icon");
       const links = document.querySelectorAll(".header__link");
+      const infoType = document.querySelectorAll(".enfoque__type--information");
+      const infoTab = document.querySelectorAll(".enfoque__type--step")
 
       if(menuBurger) {
         menuBurger.addEventListener("click", function () {
@@ -27,5 +29,25 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
+
+      if(infoTab) {
+        infoTab.forEach(type => {
+          type.addEventListener("click", function() {
+            infoType.forEach(info =>  {
+              info.classList.remove("enfoque__type--active")
+            })
+
+            const id = type.getAttribute("data-id")
+
+            document.querySelector(`.enfoque__type--information-${id}`).classList.add("enfoque__type--active");
+
+          })
+        })
+      }
+
+      if (window.innerWidth >= 1024 && infoTab[0]) {
+        infoTab[0].click();
+      }
+
     });
 });
