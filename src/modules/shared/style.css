@@ -92,18 +92,16 @@ header {
 .header__links {
   list-style: none;
   color: #FFFFFF;
-  font-weight: 250;
+  font-weight: 100;
 }
 
-.header__media {
-  display: none;
-}
 
 @media (min-width: 1280px) {
   .header__container {
-    width: 90%;
     margin: 0 auto;
     height: 100%;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .header__box {
@@ -111,15 +109,17 @@ header {
     flex-direction: row;
     height: 100%;
     align-items: center;
+    gap: 1rem;
   }
 
   .header__links {
     display: flex;
     font-size: 12px;
     text-wrap: nowrap;
-    gap: 1rem;
+    gap: 12px;
     height: 100%;
     align-items: center;
+    line-height: 19.36px;
   }
 
   .header__link {
@@ -150,14 +150,28 @@ header {
   .header__link>a:hover::after {
     height: 1rem;
   }
+
+  .header__media {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 1536px) {
+
+  .header__container { 
+    justify-content: center;
+    gap: 6rem;
+  }
+
   .header__links {
     list-style: none;
     color: #FFFFFF;
-    font-weight: 250;
     font-size: 14px;
+  }
+
+  .header__box {
+    gap: 6rem;
   }
 }
 
