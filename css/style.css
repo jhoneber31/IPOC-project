@@ -453,6 +453,96 @@ header {
   }
 }
 
+/*********** COMO HACEMOS ***********/
+.enfoque__section {
+  height: calc(100vh - 101px);
+}
+
+.enfoque__section>.container {
+  display: none;
+}
+
+.enfoque__box {
+  height: 100%;
+}
+
+.enfoque__title {
+  font-weight: 300;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  height: 40%;
+  color: var(--color-secondary);
+  font-size: 3rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.enfoque__box-desc {
+  display: flex;
+  height: 60%;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  text-align: justify;
+  background-color: var(--color-secondary);
+}
+
+@media(min-width: 1024px) {
+
+  .enfoque__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .enfoque__section>.container {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+  }
+
+  .enfoque__box {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .enfoque__title {
+    height: fit-content;
+    padding-bottom: 0;
+    width: 40%;
+    justify-content: end;
+    padding-right: 40px;
+    font-size: 4rem;
+  }
+
+  .enfoque__box-desc {
+    height: fit-content;
+    width: 60%;
+    padding: 120px 120px 120px 80px;
+  }
+
+  .enfoque__description {
+    display: flex;
+    font-size: 28px;
+    max-width: 647px;
+  }
+}
+
+
+@media(min-width: 1536px) {
+  .enfoque__section>.container {
+    margin-top: 100px;
+  }
+}
+
 /*********** CONTACTANOS ***********/
 .contactanos__background {
   background-color: var(--color-secondary);
