@@ -78,15 +78,36 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 15px;
+  position: relative;
 }
 
 .header__container > img {
   width: 7rem;
 }
 
+.burger-icon {
+  cursor: pointer;
+}
+
 .header__box {
-  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 15px;
+  background-color: var(--color-primary);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; 
+}
+
+.header__box-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .header__links {
@@ -95,12 +116,43 @@ header {
   font-weight: 100;
 }
 
+.header__media {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__link > a {
+  padding: 1rem 0;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.header__link > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0rem;
+  bottom: 0;
+  background-color: var(--color-green);
+  transition: height 0.3s ease-in-out;
+}
+
+.header__link > a:hover::after {
+  height: .5rem;
+}
+
 @media (min-width: 1280px) {
   .header__container {
     margin: 0 auto;
     height: 100%;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .header__box {
@@ -108,7 +160,20 @@ header {
     flex-direction: row;
     height: 100%;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .header__box {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: static;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .burger-icon {
+    display: none;
   }
 
   .header__links {
@@ -127,32 +192,16 @@ header {
     align-items: center;
   }
 
-  .header__link > a {
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-  }
-
   .header__link > a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0rem;
     top: 100%;
-    background-color: var(--color-green);
-    transition: height 0.3s ease-in-out;
   }
-
+  
   .header__link > a:hover::after {
     height: 1rem;
   }
 
   .header__media {
-    display: flex;
-    gap: 1rem;
+    margin-top: 0;
   }
 }
 
@@ -176,7 +225,7 @@ header {
 /* Home */
 
 .home__background {
-  background-image: url("./images/background-home.png");
+  background-image: url("./../assets/background-home.png");
   background-size: cover;
 }
 
