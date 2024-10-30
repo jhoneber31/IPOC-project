@@ -133,7 +133,12 @@ header {
   width: fit-content;
 }
 
-.header__link > a::after {
+.header__link-active > a {
+  color: var(--color-green);
+}
+
+.header__link > a::after
+{
   content: "";
   position: absolute;
   width: 100%;
@@ -143,8 +148,19 @@ header {
   transition: height 0.3s ease-in-out;
 }
 
-.header__link > a:hover::after {
+.header__link > a:hover::after,
+ {
   height: .5rem;
+}
+
+.header__link-active > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .5rem;
+  bottom: 0;
+  background-color: var(--color-green);
+  transition: height 0.3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
@@ -197,6 +213,11 @@ header {
   }
   
   .header__link > a:hover::after {
+    height: 1rem;
+  }
+
+  .header__link-active > a::after {
+    top: 100%;
     height: 1rem;
   }
 
