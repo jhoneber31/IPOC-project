@@ -6,6 +6,7 @@
   --color-blue-secondary: #023c6e;
   --color-blue-tertiary: #012c70;
   --color-green-secondary: #4ec0bd;
+  --color-input-border: #f2f2f2;
 }
 
 * {
@@ -341,5 +342,140 @@ header {
   .purpose__desc {
     max-width: 30%;
     font-size: 20px;
+  }
+}
+
+/*********** CONTACTANOS ***********/
+.contactanos__background {
+  background-color: var(--color-secondary);
+  padding-top: 60px;
+}
+
+.contactanos__title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.contactanos__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactanos__content__inputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 505px;
+  width: 100%;
+}
+
+.contactanos__content__inputs input {
+  max-width: 300px;
+  width: 100%;
+  height: 59px;
+  border: 1px solid var(--color-input-border);
+  background-color: transparent;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: white;
+  font-family: Inter;
+  padding: 0 20px;
+}
+
+.contactanos__content__inputs input::placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+.contactanos__content__inputs input::placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+.contactanos__button {
+  max-width: 117px;
+  height: 59px;
+}
+
+.contactanos__content__contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.contactanos__content__contact p {
+  color: white;
+  font-family: Inter;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 20px;
+}
+
+.contactanos__content__socials a {
+  margin-left: 20px;
+}
+
+.contactanos__content__socials img {
+  box-shadow: 14px 14px 18px hsl(0deg 0% 13.33% / 69%);
+  border-radius: 50%;
+  max-height: 40px;
+}
+
+@media (min-width: 425px) {
+  .contactanos__content__inputs input {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .contactanos__content__inputs {
+    max-width: 400px;
+  }
+  .contactanos__content__inputs input {
+    max-width: 400px;
+  }
+  .contactanos__content {
+    flex-direction: row;
+  }
+
+  .contactanos__content__socials {
+    padding-left: 20px;
+  }
+
+  .contactanos__content__socials img {
+    max-height: 52px;
+  }
+
+  .contactanos__content__contact {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactanos__content__inputs input {
+    max-width: 505px;
+  }
+  .contactanos__title {
+    font-size: 5rem;
+  }
+  .contactanos__content__socials img {
+    max-height: 72px;
+  }
+
+  .contactanos__content__contact p {
+    color: white;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .contactanos__title {
+    font-size: 5.5rem;
   }
 }
