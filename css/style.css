@@ -1,10 +1,10 @@
 :root {
   --color-primary: #072145;
   --color-secondary: #004481;
-  --color-skyblue: #0065AB;
+  --color-skyblue: #0065ab;
   --color-green: #028687;
-  --color-blue-secondary: #023C6E;
-  --color-blue-tertiary: #012C70;
+  --color-blue-secondary: #023c6e;
+  --color-blue-tertiary: #012c70;
   --color-green-secondary: #4ec0bd;
 }
 
@@ -15,8 +15,8 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr;
@@ -35,8 +35,8 @@ a {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding-right:15px;
-  padding-left:15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (min-width: 640px) {
@@ -80,7 +80,7 @@ header {
   padding: 1rem 15px;
 }
 
-.header__container>img {
+.header__container > img {
   width: 7rem;
 }
 
@@ -91,10 +91,9 @@ header {
 
 .header__links {
   list-style: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 100;
 }
-
 
 @media (min-width: 1280px) {
   .header__container {
@@ -128,7 +127,7 @@ header {
     align-items: center;
   }
 
-  .header__link>a {
+  .header__link > a {
     cursor: pointer;
     height: 100%;
     display: flex;
@@ -137,8 +136,8 @@ header {
     cursor: pointer;
   }
 
-  .header__link>a::after {
-    content: '';
+  .header__link > a::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 0rem;
@@ -147,7 +146,7 @@ header {
     transition: height 0.3s ease-in-out;
   }
 
-  .header__link>a:hover::after {
+  .header__link > a:hover::after {
     height: 1rem;
   }
 
@@ -158,15 +157,14 @@ header {
 }
 
 @media (min-width: 1536px) {
-
-  .header__container { 
+  .header__container {
     justify-content: center;
     gap: 6rem;
   }
 
   .header__links {
     list-style: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 14px;
   }
 
@@ -175,11 +173,10 @@ header {
   }
 }
 
-
 /* Home */
 
 .home__background {
-  background-image: url('./images/background-home.png');
+  background-image: url("./images/background-home.png");
   background-size: cover;
 }
 
@@ -190,7 +187,7 @@ header {
 }
 
 .home__title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -198,22 +195,102 @@ header {
   flex-direction: column;
 }
 
-.home__title>span:last-child {
+.home__title > span:last-child {
   color: var(--color-green-secondary);
 }
 
 .home__desc {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-@media(min-width:1024px) {
+@media (min-width: 1024px) {
   .home__title {
     font-size: 3.5rem;
   }
 
   .home__desc {
     font-size: 1.7rem;
+  }
+}
+
+/*********** PORPOSE ***********/
+
+.purpose__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.purpose__title {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 4rem 2.5rem 4rem 5rem;
+  width: fit-content;
+}
+
+.purpose__desc {
+  color: var(--color-primary);
+  padding: 0 15px;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 32.81px;
+}
+
+@media (min-width: 640px) {
+  .purpose__title {
+    padding: 8rem 5rem 8rem 10rem;
+  }
+
+  .purpose__desc {
+    max-width: 80%;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .purpose__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .purpose__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .purpose__title {
+    font-size: 4rem;
+    max-width: 902px;
+    height: 534px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 66px 0 120px;
+  }
+
+  .purpose__desc {
+    padding-left: 30px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .purpose__title {
+    width: 45%;
+  }
+
+  .purpose__desc {
+    max-width: 30%;
+    font-size: 20px;
   }
 }
