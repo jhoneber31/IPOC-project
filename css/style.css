@@ -569,7 +569,83 @@ header {
     align-items: flex-start;
   }
 }
+
+/*********** NOTICIA DETALLE ***********/
+.news_detail__container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news_detail__optiones {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+.news_details_main_option {
+  background-color: var(--color-primary);
+  text-align: center;
+  color: white;
+  width: 100%;
+  min-width: 300px;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+
+.news_details_main_option_other {
+  border: 1px solid var(--color-primary);
+  text-align: center;
+  width: 100%;
+  min-width: 300px;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Inter;
+}
+
+.sub_title {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.news_detail__content hr {
+  width: 100%;
+}
+
+.news_detail__content h2{
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Inter;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.news_detail__content img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.next_details_content_text {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .news_detail__container {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .next_details_content_text {
+    padding-right: 100px;
+  }
+}
 /*********** QUE HACEMOS ***********/
+
 .hacemos__section {
   display: flex;
   flex-direction: column;
