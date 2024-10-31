@@ -644,6 +644,78 @@ p {
     padding-right: 100px;
   }
 }
+
+/*********** CONOCENOS ***********/
+
+.conocenos__title {
+  color: var(--color-primary);
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 300;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.conocenos__background {
+  background-color: #cadfea;
+}
+
+.conocenos__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.conocenos__content {
+  max-width: 95%;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .conocenos__container {
+    flex-direction: row;
+  }
+  .conocenos__content {
+    max-width: 48%;
+  }
+}
+.conocenos__content__img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.conocenos__content__title {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  align-items: start;
+}
+
+.conocenos__content_title_link {
+  max-width: 50px;
+  position: relative;
+  top: 5px;
+}
+
+.conocenos_content_sub_title {
+  font-size: 14px;
+  position: relative;
+  top: -22px;
+  font-weight: bold;
+}
+
+.conocenos_content__main_text {
+  color: #555555;
+  font-weight: 300;
+  font-family: Inter;
+}
+
+
 /*********** QUE HACEMOS ***********/
 
 .hacemos__section {
