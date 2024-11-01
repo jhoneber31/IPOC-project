@@ -49,5 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
         infoTab[0].click();
       }
 
+      function scrollToNextSection(sectionId) {
+        const nextSection = document.getElementById(sectionId);
+        if(nextSection) {
+          nextSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+          console.log("No existe la sección");
+        }
+      }
+
+      document.querySelectorAll(".btn-next").forEach(btn => {
+        btn.addEventListener("click", function() {
+          const sectionId = this.getAttribute("data-section-id");
+          console.log({ sectionId });
+          scrollToNextSection(sectionId);
+        });
+      })
+
     });
 });
