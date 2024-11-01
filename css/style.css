@@ -1029,6 +1029,7 @@ p {
 .enfoque__ipoc--box {
   background-color: #CADFEA;
   padding: 50px 15px;
+  width: 100%;
 }
 
 .enfoque__ipoc--title {
