@@ -356,7 +356,7 @@ header {
   {
     font-size: 4rem;
     max-width: 902px;
-    height: 534px;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -367,6 +367,7 @@ header {
   .experiencia__desc {
     padding-left: 30px;
     font-size: 18px;
+    max-width: 40vw;
   }
 }
 
@@ -378,7 +379,6 @@ header {
 
   .purpose__desc, 
   .experiencia__desc {
-    max-width: 30%;
     font-size: 20px;
   }
 }
