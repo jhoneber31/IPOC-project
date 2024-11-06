@@ -1143,7 +1143,7 @@ p {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
   color: #FFFFFF;
   font-weight: 700;
