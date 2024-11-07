@@ -137,7 +137,7 @@ header {
 }
 
 .header__link-active > a {
-  color: var(--color-green);
+  font-weight: 700;
 }
 
 .header__link > a::after {
@@ -503,6 +503,7 @@ header {
 
   .ofrecemos__grid--secondary {
     grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
   }
 }
 
@@ -930,6 +931,15 @@ p {
     max-width: 900px;
   }
 
+  .hacemos__section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hacemos__description > img {
+    width: 3.5rem;
+  }
+
   .hacemos__title {
     padding-bottom: 0;
     border-bottom: none;
@@ -1011,6 +1021,10 @@ p {
   cursor: pointer;
 }
 
+.btn-next>img {
+  width: 3.5rem;
+}
+
 .enfoque__title {
   font-weight: 300;
   padding-left: 15px;
@@ -1050,7 +1064,7 @@ p {
 .enfoque__ipoc--title {
   color: var(--color-secondary);
   font-weight: 300;
-  font-size: 2.8rem;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
 }
@@ -1067,9 +1081,10 @@ p {
   font-weight: 300;
   color: var(--color-secondary);
   font-size: 1.5rem;
-  max-width: 660px;
+  max-width: 542px;
   margin-left: auto;
   margin-right: auto;
+  transform: translateX(10%);
 }
 
 .enfoque__type {
@@ -1224,6 +1239,9 @@ p {
 
   .enfoque__ipoc--box {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .enfoque__section {
@@ -1349,7 +1367,7 @@ p {
 .contactanos__title {
   color: white;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 100;
   text-align: center;
   padding-bottom: 40px;
 }
@@ -1371,7 +1389,7 @@ p {
 .contactanos__content__inputs input {
   max-width: 300px;
   width: 100%;
-  height: 59px;
+  height: 50px;
   border: 1px solid var(--color-input-border);
   background-color: transparent;
   margin-bottom: 15px;
@@ -1394,6 +1412,9 @@ p {
 .contactanos__button {
   max-width: 117px;
   height: 59px;
+  color: #232321;
+  font-size: 25px;
+  font-weight: 400;
 }
 
 .contactanos__content__contact {
@@ -1447,16 +1468,39 @@ p {
 
   .contactanos__content__contact {
     padding-top: 0;
+    transform: translateY(-25%);
   }
 }
 
 @media (min-width: 1024px) {
+
+  .contactanos__content {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .contactanos__content__inputs input {
     max-width: 505px;
+    font-size: 1.5rem;
   }
   .contactanos__title {
     font-size: 5rem;
+    max-width: 950px;
+    margin: 0 auto;
   }
+
+  .contactanos__content__socials {
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  .contactanos__content__socials>a {
+    margin-left: 0px;
+  }
+
   .contactanos__content__socials img {
     max-height: 72px;
   }
@@ -1464,9 +1508,10 @@ p {
   .contactanos__content__contact p {
     color: white;
     font-family: Inter;
-    font-size: 32px;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
     padding-top: 20px;
+    text-align: center;
   }
 }
 @media (min-width: 1280px) {
