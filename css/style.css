@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
@@ -70,8 +74,17 @@ a {
   }
 }
 
+section {
+  min-height: 100vh;
+}
+
 header {
   background-color: var(--color-primary);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
 }
 
 .header__container {
@@ -249,6 +262,7 @@ header {
 .home__background {
   background-image: url("./../assets/background-home.png");
   background-size: cover;
+  min-height: 100vh;
 }
 
 .home__container {
@@ -288,8 +302,13 @@ header {
 
 /*********** PORPOSE ***********/
 
+.esperiencia__section {
+  min-height: 100vh;
+}
+
 .purpose__section {
   position: relative;
+  min-height: 100vh;
 }
 
 .purpose__container,
@@ -398,6 +417,7 @@ header {
 
 .ofrecemos__section {
   background-color: var(--color-secondary);
+  min-height: 100vh;
 }
 
 .ofrecemos__container {
@@ -540,8 +560,6 @@ header {
   display: flex;
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-left: -20px;
-  margin-right: -20px;
   flex-direction: column;
   align-items: center;
 }
@@ -574,6 +592,7 @@ header {
 @media (min-width: 768px) {
   .news__top {
     flex-direction: row;
+    justify-content: center;
   }
 
   .news__card {
@@ -890,6 +909,8 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .hacemos__banner {
@@ -982,7 +1003,7 @@ p {
 
 /*********** COMO HACEMOS ***********/
 .enfoque__section {
-  min-height: calc(100vh - 101px);
+  min-height: 100vh;
 }
 
 /* .enfoque__section>.container {
@@ -1084,7 +1105,7 @@ p {
   max-width: 542px;
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(10%);
+  /* transform: translateX(10%); */
 }
 
 .enfoque__type {
@@ -1362,6 +1383,7 @@ p {
 .contactanos__background {
   background-color: var(--color-secondary);
   padding-top: 60px;
+  min-height: 100vh;
 }
 
 .contactanos__title {

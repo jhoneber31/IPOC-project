@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const menuBurger = document.getElementById("burger-icon");
       const links = document.querySelectorAll(".header__link");
+      const sections = document.querySelectorAll("section");
       const infoType = document.querySelectorAll(".enfoque__type--information");
       const infoTab = document.querySelectorAll(".enfoque__type--step")
 
@@ -15,19 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      if(links) {
-        const currentUrl = window.location.pathname;
-        console.log({ currentUrl });
-        links.forEach((link) => {
-          const aHref = link.querySelector("a").getAttribute("href");
-          const linkActive = new URL(aHref, window.location.origin).pathname
-
-          console.log({ linkActive });
-
-          if (currentUrl === linkActive) {
-            link.classList.add("header__link-active");
+      window.onscroll = () => {
+        sections.forEach(sec => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 250;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+          if(top >= offset && top < offset + height) {
+            links.forEach(link => {
+              link.classList.remove("header__link-active");
+              const aLink = link.querySelector("a");
+              if(aLink.getAttribute("href") === `#${id}`) {
+                link.classList.add("header__link-active");
+              }
+            });
           }
-        });
+        })
       }
 
       if(infoTab) {
