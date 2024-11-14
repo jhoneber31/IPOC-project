@@ -561,6 +561,7 @@ header {
 
 .news__container {
   border-color: black;
+  padding-bottom: 100px;
 }
 
 .news__top {
