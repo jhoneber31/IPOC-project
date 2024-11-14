@@ -1393,7 +1393,7 @@ p {
 .contactanos__background {
   background-color: var(--color-secondary);
   padding-top: 60px;
-  min-height: 100vh;
+  min-height: calc(100vh - 105px);
 }
 
 .contactanos__title {
