@@ -304,6 +304,11 @@ header {
 
 .esperiencia__section {
   min-height: 100vh;
+  position: relative;
+}
+
+.conocenos__section {
+
 }
 
 .purpose__section {
@@ -419,11 +424,12 @@ header {
 .ofrecemos__section {
   background-color: var(--color-secondary);
   min-height: 100vh;
+  position: relative;
 }
 
 .ofrecemos__container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .ofrecemos__grid--secondary,
@@ -845,6 +851,8 @@ p {
 
 .conocenos__background {
   background-color: #cadfea;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .conocenos__container {
@@ -1541,4 +1549,9 @@ p {
   .contactanos__title {
     font-size: 5.5rem;
   }
+}
+
+
+.news__background {
+  position: relative;
 }
