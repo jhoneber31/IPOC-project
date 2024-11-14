@@ -16,6 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
+      const href = document.querySelectorAll(".header__link a");
+      const offset = 105; 
+
+      href.forEach(link => {
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          
+          const sectionID = this.getAttribute("href").substring(1);
+          const section = document.getElementById(sectionID);
+      
+          const sectionPosition = section.offsetTop - offset;
+
+          document.getElementById("header__box").classList.toggle("header__box-active");
+      
+          window.scrollTo({
+            top: sectionPosition,
+            behavior: "smooth"
+          });
+        });
+      });
+
       window.onscroll = () => {
         sections.forEach(sec => {
           let top = window.scrollY;
