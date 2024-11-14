@@ -77,7 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
       function scrollToNextSection(sectionId) {
         const nextSection = document.getElementById(sectionId);
         if(nextSection) {
-          nextSection.scrollIntoView({ behavior: "smooth" });
+          const offsetPosition = nextSection.offsetTop - 105;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
         } else {
           console.log("No existe la sección");
         }
