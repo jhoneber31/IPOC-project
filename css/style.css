@@ -852,8 +852,6 @@ p {
 
 .conocenos__background {
   background-color: #cadfea;
-  position: relative;
-  padding-bottom: 100px;
 }
 
 .conocenos__container {
@@ -861,6 +859,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 
