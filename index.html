@@ -28,14 +28,17 @@
             <span>y Relaciones con Respaldo</span>
           </h1>
           <p class="home__desc">
-            Asesoría y Consultoría Estratégica en Asuntos <br />
+            Asesoría y Consultoría Estratégica en Asuntos <br class="web" />
             Institucionales, Políticos y Comunicacionales
           </p>
         </div>
       </div>
-      <button class="logotipo__arrow btn-next" data-section-id="purpose">
-        <img src="./assets/logitpo.svg" alt="logitpo" />
-      </button>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next" data-section-id="purpose">
+          <img src="./assets/logitpo.svg" alt="logitpo" />
+        </button>
+      </div>
+      
     </section>
     <section id="purpose" class="purpose__section">
       <div class="purpose__container">
@@ -50,9 +53,11 @@
           con el progreso y bienestar de nuestra sociedad.
         </p>
       </div>
-      <button class="logotipo__arrow btn-next" data-section-id="hacemos">
-        <img src="./assets/logitpo.svg" alt="logitpo" />
-      </button>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next" data-section-id="hacemos">
+          <img src="./assets/logitpo.svg" alt="logitpo" />
+        </button>
+      </div>
     </section>
     <section id="hacemos" class="hacemos__section">
       <div class="hacemos__banner">
@@ -75,7 +80,9 @@
           entender y gestionar de manera efectiva los distintos aspectos del
           entorno político, institucional y del marco legal y regulatorio
         </p>
-        <button class="btn-next" data-section-id="enfoque">
+      </div>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next arrow_hacemos" data-section-id="enfoque">
           <img src="./assets/logitpo.svg" alt="logitpo" />
         </button>
       </div>
@@ -94,7 +101,9 @@
             sólido que maximiza el impacto de las acciones ejecutadas.
           </p>
         </div>
-        <button class="btn-next" data-section-id="enfoque__ipoc">
+      </div>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next" data-section-id="enfoque__ipoc">
           <img src="./assets/logitpo.svg" alt="logitpo" />
         </button>
       </div>
@@ -163,7 +172,9 @@
             planteados. Estos tres ejes son
           </p>
         </div>
-        <button class="btn-next" data-section-id="enfoque__container">
+      </div>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next" data-section-id="enfoque__container">
           <img src="./assets/logitpo.svg" alt="logitpo" />
         </button>
       </div>
@@ -180,7 +191,7 @@
               <div class="enfoque__type--icon">
                 <img src="./assets/institucion.svg" alt="institucion-icon" />
               </div>
-              <div class="enfoque__type--name">
+              <div class="enfoque__type--name institucional">
                 <span>Eje Institucional</span>
               </div>
             </div>
@@ -206,7 +217,7 @@
               <div class="enfoque__type--icon">
                 <img src="./assets/politico.svg" alt="politico-icon" />
               </div>
-              <div class="enfoque__type--name">
+              <div class="enfoque__type--name politico">
                 <span>Eje Político</span>
               </div>
             </div>
@@ -234,7 +245,7 @@
                   alt="comunicacional-icon"
                 />
               </div>
-              <div class="enfoque__type--name">
+              <div class="enfoque__type--name comunicacional">
                 <span>Eje Comunicacional</span>
               </div>
             </div>
@@ -260,6 +271,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="container container_arrow">
         <button class="logotipo__arrow btn-next" data-section-id="ofrecemos">
           <img src="./assets/logitpo.svg" alt="logitpo" />
         </button>
@@ -349,9 +362,12 @@
           <img src="./assets/street.png" alt="street" />
         </div>
       </div>
-      <button class="logotipo__arrow btn-next" data-section-id="experiencia">
-        <img src="./assets/logitpo.svg" alt="logitpo" />
-      </button>
+      </div>
+      <div class="container container_arrow ">
+        <button class="logotipo__arrow btn-next ofrecemos" data-section-id="experiencia">
+          <img src="./assets/logitpo.svg" alt="logitpo" />
+        </button>
+      </div>
     </section>
     <section id="experiencia" class="esperiencia__section">
       <div class="experiencia__container">
@@ -372,9 +388,11 @@
           valor a la sociedad
         </p>
       </div>
-      <button class="logotipo__arrow btn-next" data-section-id="conocenos">
-        <img src="./assets/logitpo.svg" alt="logitpo" />
-      </button>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next experiencia" data-section-id="conocenos">
+          <img src="./assets/logitpo.svg" alt="logitpo" />
+        </button>
+      </div>
     </section>
     <section id="conocenos" class="conocenos__section">
       <div class="container">
@@ -448,13 +466,15 @@
               </p>
             </div>
           </div>
-          <button class="logotipo__arrow btn-next" data-section-id="news">
+        </div>
+        <div class="container container_arrow">
+          <button class="logotipo__arrow btn-next conocenos" data-section-id="news">
             <img src="./assets/logitpo.svg" alt="logitpo" />
           </button>
         </div>
       </div>
     </section>
-    <section id="news" class="news__background">
+    <!-- <section id="news" class="news__background">
       <div class="container news__container">
         <div class="news__top">
           <div class="news__card">
@@ -671,10 +691,12 @@
           </div>
         </div>
       </div>
-      <button class="logotipo__arrow btn-next" data-section-id="contactanos">
-        <img src="./assets/logitpo.svg" alt="logitpo" />
-      </button>
-    </section>
+      <div class="container container_arrow">
+        <button class="logotipo__arrow btn-next" data-section-id="contactanos">
+          <img src="./assets/logitpo.svg" alt="logitpo" />
+        </button>
+      </div>
+    </section> -->
     <section id="contactanos" class="contactanos__background">
       <div class="container contactanos__container">
         <h2 class="contactanos__title">Contáctate con nosotros</h2>

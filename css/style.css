@@ -74,6 +74,30 @@ a {
   }
 }
 
+.container_arrow {
+  position: relative;
+}
+
+.btn-next.arrow_hacemos {
+  bottom: -60px;
+
+}
+
+.btn-next.ofrecemos {
+  bottom: 14px;
+}
+
+.btn-next.experiencia {
+  bottom: 14px;
+}
+
+@media(min-width: 768px) {
+  .btn-next.conocenos {
+    bottom: 30px;
+  }
+}
+
+
 section {
   min-height: 100vh;
 }
@@ -91,13 +115,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 15px;
+  padding: 0.7rem 15px;
   position: relative;
   z-index: 999;
 }
 
 .ipoc-logo {
-  width: 7rem;
+  width: 220px;
 }
 
 .burger-icon {
@@ -227,12 +251,12 @@ header {
   }
 
   .header__link > a:hover::after {
-    height: 1rem;
+    height: 0.7rem;
   }
 
   .header__link-active > a::after {
     top: 100%;
-    height: 1rem;
+    height: 0.7rem;
   }
 
   .header__media {
@@ -257,12 +281,25 @@ header {
   }
 }
 
+/* Util */
+
+.web {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .web {
+    display: block;
+  }
+}
+
+
 /* Home */
 
 .home__background {
   background-image: url("./../assets/background-home.png");
   background-size: cover;
-  min-height: 100vh;
+  min-height: 85vh;
 }
 
 .home__container {
@@ -288,6 +325,7 @@ header {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
+  text-align: left;
 }
 
 @media (min-width: 1024px) {
@@ -313,7 +351,7 @@ header {
 
 .purpose__section {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .purpose__container,
@@ -324,6 +362,8 @@ header {
   flex-direction: column;
   justify-content: center;
   row-gap: 2rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .logotipo__arrow {
@@ -351,6 +391,7 @@ header {
   padding: 0 15px;
   font-weight: 300;
   font-size: 1rem;
+  text-align: justify;
   line-height: 32.81px;
 }
 
@@ -376,6 +417,15 @@ header {
     align-items: center;
     justify-content: start;
   }
+  .purpose__title, 
+  .experiencia__title,
+  .purpose__desc,
+  .experiencia__desc 
+  {
+    
+    position: relative;
+    top: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -392,7 +442,7 @@ header {
   {
     font-size: 4rem;
     max-width: 902px;
-    height: 70vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -402,7 +452,7 @@ header {
   .purpose__desc,
   .experiencia__desc {
     padding-left: 30px;
-    font-size: 18px;
+    font-size: 24px;
     max-width: 40vw;
   }
 }
@@ -415,7 +465,7 @@ header {
 
   .purpose__desc, 
   .experiencia__desc {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -490,6 +540,7 @@ header {
 
 .ofrecemos__card--white>p {
   font-size: 1.5rem;
+  text-align: justify;
 }
 
 .br-card-blue {
@@ -847,7 +898,7 @@ p {
   font-size: 3.5rem;
   text-align: center;
   font-weight: 300;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -864,10 +915,30 @@ p {
   padding-bottom: 100px;
 }
 
+.conocenos__content__text {
+  text-align: justify;
+}
 
 .conocenos__content {
   max-width: 95%;
   padding-bottom: 40px;
+  position: relative;
+  margin-top: -40px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .conocenos__title {
+    padding-top: 80px;
+    padding-bottom: 230px;
+    font-size: 5rem;
+  }
+  .conocenos__content {
+    max-width: 95%;
+    padding-bottom: 40px;
+    position: relative;
+    top: -150px;
+    margin-bottom: -160px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -877,6 +948,14 @@ p {
   .conocenos__content {
     max-width: 48%;
   }
+}
+@media (min-width: 1024px) {
+  
+.conocenos__content {
+  &:nth-child(1) {
+    padding-right: 30px;
+  }
+}
 }
 .conocenos__content__img {
   max-width: 400px;
@@ -920,7 +999,7 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  min-height: 100vh;
+  min-height: 95vh;
   position: relative;
 }
 
@@ -956,6 +1035,10 @@ p {
   margin-left: auto;
 }
 
+.hacemos__info{
+  text-align: justify;
+}
+
 @media (min-width: 1024px) {
   .hacemos__banner > .container {
     display: flex;
@@ -987,10 +1070,11 @@ p {
   }
 
   .hacemos__info {
-    font-size: 1.2rem;
-    max-width: 55%;
+    font-size: 24px;
+    max-width: 49.6%;
     margin-left: auto;
     transform: translateX(-5%);
+    padding-right: 7%;
   }
 
   .hacemos__description > img {
@@ -1017,10 +1101,6 @@ p {
   min-height: 100vh;
 }
 
-/* .enfoque__section>.container {
-  display: none;
-} */
-
 .enfoque__box
 {
   height: calc(100vh - 101px);
@@ -1028,7 +1108,7 @@ p {
 }
 
 .enfoque__ipoc {
-  height: 100vh;
+  height: 92vh;
   position: relative;
 }
 
@@ -1039,15 +1119,15 @@ p {
   background-color: white;
   padding-top: 30px;
   padding-bottom: 100px;
-  min-height: 100vh;
+  min-height: 92vh;
   position: relative;
   width: 100%;
 }
 
 .btn-next {
   position: absolute;
-  bottom: 2%;
-  right: 5%;
+  bottom: 60px;
+  right: 4.5%;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -1096,27 +1176,41 @@ p {
 .enfoque__ipoc--title {
   color: var(--color-secondary);
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3.5rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
 }
 
 .enfoque__ipoc-light {
-  float: left;
-  margin-right: 10px;
   position: relative;
-  top: -10px;
 }
 
 .enfoque__ipoc--subtitle {
   margin-top: 40px;
   font-weight: 300;
   color: var(--color-secondary);
-  font-size: 1.5rem;
+  font-size: 24px;
   max-width: 542px;
   margin-left: auto;
   margin-right: auto;
-  /* transform: translateX(10%); */
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .enfoque__ipoc--title {
+    font-size: 5rem;
+    flex-direction: row;
+  }
+  .enfoque__ipoc-light {
+    margin-right: 10px;
+    position: absolute;
+    top: 0px;
+    left: -50px;
+  }
+
 }
 
 .enfoque__type {
@@ -1164,9 +1258,20 @@ p {
 } */
 .enfoque__type--step.enfoque__type--step-1::before {
   content: '';
+}
+.enfoque__type--step.enfoque__type--step-2::before {
+  content: '';
+}
+.enfoque__type--step.enfoque__type--step-3::before {
+  content: '';
+}
+@media (min-width: 768px) {
+  
+.enfoque__type--step.enfoque__type--step-1::before {
+  content: '';
   position: absolute;
   width: 10px;
-  height: 149px;
+  height: 139px;
   top: 0;
   left: 0;
   background-color: var(--color-primary);
@@ -1175,8 +1280,8 @@ p {
   content: '';
   position: absolute;
   width: 10px;
-  height: 149px;
-  top: 149px;
+  height: 139px;
+  top: 139px;
   left: 0;
   background-color: var(--color-secondary);
 }
@@ -1184,10 +1289,11 @@ p {
   content: '';
   position: absolute;
   width: 10px;
-  height: 149px;
-  top: 298px;
+  height: 139px;
+  top: 278px;
   left: 0;
   background-color: var(--color-skyblue);
+}
 }
 
 .enfoque__type--icon>img {
@@ -1208,12 +1314,24 @@ p {
   cursor: pointer;
 }
 
+.enfoque__type--name.institucional {
+  background-color: #1E3657;
+}
+
+.enfoque__type--name.politico {
+  background-color: #1A568D;
+}
+
+.enfoque__type--name.comunicacional {
+  background-color: #1A73B3;
+}
+
 .enfoque__type--name::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   opacity: 0.1;
   top: 0;
   left: 0;
@@ -1230,13 +1348,13 @@ p {
 .enfoque__type--step-3 {
   background-color: var(--color-skyblue);
 }
-
 .enfoque__type--information {
-  padding: 40px 15px;
+  padding: 40px 40px;
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
-  max-width: 400px;
+  max-width: 440px;
 }
 
 .enfoque__type--active {
@@ -1247,18 +1365,19 @@ p {
   font-weight: 300;
   color: #FFFFFF;
   font-size: 1rem;
+  text-align: justify;
 }
 
 .enfoque__type--information-1 {
-  background-color: var(--color-primary);
+  background-color: #1E3657;
 }
 
 .enfoque__type--information-2 {
-  background-color: var(--color-secondary);
+  background-color: #1A568D;
 }
 
 .enfoque__type--information-3 {
-  background-color: var(--color-skyblue);
+  background-color: #1A73B3;
 }
 
 .enfoque__container>img {
@@ -1312,8 +1431,9 @@ p {
 
   .enfoque__description {
     display: flex;
-    font-size: 28px;
-    max-width: 647px;
+    font-size: 24px;
+    max-width: 510px;
+    font-weight: 300;
   }
 
   .enfoque__ipoc {
@@ -1323,7 +1443,7 @@ p {
   .enfoque__type {
     flex-direction: row;
     justify-content: center;
-    transform: translateX(-27%);
+    transform: translateX(-32%);
     align-items: stretch;
   }
   
@@ -1375,7 +1495,7 @@ p {
   }
 
   .enfoque__type--name {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .enfoque__type--step {
@@ -1394,7 +1514,7 @@ p {
 .contactanos__background {
   background-color: var(--color-secondary);
   padding-top: 60px;
-  min-height: calc(100vh - 105px);
+  min-height: 80vh;
 }
 
 .contactanos__title {
@@ -1417,6 +1537,7 @@ p {
   flex-direction: column;
   max-width: 505px;
   width: 100%;
+  align-items: center;
 }
 
 .contactanos__content__inputs input {
@@ -1426,7 +1547,7 @@ p {
   border: 1px solid var(--color-input-border);
   background-color: transparent;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 16px;
   color: white;
   font-family: Inter;
   padding: 0 20px;
@@ -1434,6 +1555,7 @@ p {
 
 .contactanos__content__inputs input::placeholder {
   color: white;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -1443,11 +1565,23 @@ p {
 }
 
 .contactanos__button {
-  max-width: 117px;
+  max-width: 105px;
+  width: 100%;
   height: 59px;
   color: #232321;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media(min-width: 768px) {
+  .contactanos__content__inputs {
+    align-items: flex-start;
+  }
+  .contactanos__button {
+    padding-left: 20px;
+    text-align: left;
+
+  }
 }
 
 .contactanos__content__contact {
@@ -1515,12 +1649,14 @@ p {
 
   .contactanos__content__inputs input {
     max-width: 505px;
-    font-size: 1.5rem;
+    font-size: 16px;
   }
   .contactanos__title {
     font-size: 5rem;
     max-width: 950px;
     margin: 0 auto;
+    padding-bottom: 80px;
+    padding-top: 40px;
   }
 
   .contactanos__content__socials {
@@ -1549,7 +1685,7 @@ p {
 }
 @media (min-width: 1280px) {
   .contactanos__title {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 }
 
