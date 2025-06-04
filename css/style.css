@@ -499,18 +499,25 @@ header {
 .ofrecemos__card {
   padding: 40px;
   color: #FFFFFF;
-  height: auto;
+  height: 100%;
 }
 
 .ofrecemos__card>h3 {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
-.ofrecemos__card>p {
+.ofrecemos__card>ul {
   font-weight: 300;
   font-size: 1rem;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ofrecemos__card>ul>li {
+  list-style: none; //Agregar estilo de lista 1.disc: Viñeta 2.none: Sin viñeta
 }
 
 .ofrecemos__card--white {
@@ -577,6 +584,8 @@ header {
 
   .ofrecemos__grid--first-secondary {
     grid-template-columns: repeat(2, 1fr);
+    /* align-items: stretch; */
+    grid-auto-rows: 1fr;
   }
 
   .ofrecemos__grid--secondary {
@@ -587,7 +596,7 @@ header {
 
 @media(min-width: 1280px) {
   .ofrecemos__grid--secondary {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1265,7 +1274,7 @@ p {
 .enfoque__type--step.enfoque__type--step-3::before {
   content: '';
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   
 .enfoque__type--step.enfoque__type--step-1::before {
   content: '';
@@ -1515,6 +1524,7 @@ p {
   background-color: var(--color-secondary);
   padding-top: 60px;
   min-height: 80vh;
+  margin-top: 1px;
 }
 
 .contactanos__title {
